@@ -8,7 +8,10 @@ import java.util.stream.Stream;
 
 public class ImportApplication {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext cxt = new AnnotationConfigApplicationContext(TavernConfiguration.class);
+        AnnotationConfigApplicationContext cxt = new AnnotationConfigApplicationContext();
+        /*cxt.getEnvironment().addActiveProfile("city");*/
+        cxt.register(TavernConfiguration.class);
+        cxt.refresh();
 
         Stream.of(cxt.getBeanDefinitionNames()).forEach(System.out::println);
     }

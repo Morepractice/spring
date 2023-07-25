@@ -1,5 +1,9 @@
 package org.example.si.moduleConfiguration;
 
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
+@ComponentScan
 public class Bartender {
     private String name;
 

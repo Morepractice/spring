@@ -2,8 +2,10 @@ package org.example.si.moduleConfiguration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 @Configuration
+@Profile("city")
 public class BartenderConfiguration {
     @Bean
     public Bartender bartender1(){
